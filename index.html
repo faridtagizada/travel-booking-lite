@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fitness Club Lite - beginner level HTML CSS JavaScript website." />
+  <title>Fitness Club Lite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="Fitness Club Lite home">
+          <span class="brand-mark">💪</span>
+          <span class="brand-text">Fitness Club Lite</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+        <div class="nav-links" id="navLinks">
+          <a href="#features">Features</a>
+          <a href="#catalog">Catalog</a>
+          <a href="#plans">Plans</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="nav-actions">
+          <button class="btn small" id="openLogin">Login</button>
+          <button class="btn small outline" id="logoutBtn">Logout</button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Beginner JavaScript project</p>
+          <h1>Fitness Club Lite</h1>
+          <p class="hero-text">Gym landing page with plans and trainer cards. This static website uses only HTML, CSS, and JavaScript. The login is fake client-side auth using localStorage, perfect for class/demo use.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#catalog">Explore Cards</a>
+            <button class="btn secondary" id="heroLogin">Try Demo Login</button>
+          </div>
+          <div class="stats-row">
+            <div><strong>4</strong><span>demo cards</span></div>
+            <div><strong>3</strong><span>pricing tiers</span></div>
+            <div><strong>0</strong><span>backend required</span></div>
+          </div>
+        </div>
+        <aside class="hero-panel">
+          <div class="floating-badge">💪 Live preview</div>
+          <div class="panel-card active-user-card">
+            <span class="muted">Current user</span>
+            <h2 id="userLabel">Guest</h2>
+            <p id="userStatus">Login to unlock the fake dashboard section.</p>
+          </div>
+          <div class="mini-grid">
+            <div><span>HTML</span><strong>100+ lines</strong></div>
+            <div><span>CSS</span><strong>200+ lines</strong></div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section" id="features">
+        <div class="section-heading">
+          <p class="eyebrow">Why this project works</p>
+          <h2>Looks complete but stays simple</h2>
+          <p>Everything is easy to read, beginner level, and built without frameworks.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-box"><h3>Fake Auth</h3><p>Login state is saved in localStorage and shown in the dashboard banner.</p></article>
+          <article class="feature-box"><h3>Responsive UI</h3><p>The layout adapts from desktop cards to mobile stacked sections.</p></article>
+          <article class="feature-box"><h3>Interactive Cards</h3><p>Buttons, search, and modal messages are powered by basic JavaScript.</p></article>
+        </div>
+      </section>
+
+      <section class="section highlight" id="catalog">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Catalog</p>
+            <h2>Pick something cool</h2>
+          </div>
+          <label class="search-box">
+            <span>Search</span>
+            <input type="search" id="searchInput" placeholder="Type to filter cards..." />
+          </label>
+        </div>
+        <div class="card-grid" id="cardGrid">
+          <article class="card item-card" data-name="push day">
+            <div class="card-icon">💪</div>
+            <h3>Push Day</h3>
+            <p>Gym landing page with plans and trainer cards — a beginner-friendly demo card with clean spacing and hover effects.</p>
+            <div class="card-meta">
+              <span>Rating: 4.0</span>
+              <span>From $99</span>
+            </div>
+            <button class="btn ghost choose-btn" data-choice="Push Day">Choose</button>
+          </article>
+          <article class="card item-card" data-name="pull day">
+            <div class="card-icon">💪</div>
+            <h3>Pull Day</h3>
+            <p>Gym landing page with plans and trainer cards — a beginner-friendly demo card with clean spacing and hover effects.</p>
+            <div class="card-meta">
+              <span>Rating: 4.1</span>
+              <span>From $174</span>
+            </div>
+            <button class="btn ghost choose-btn" data-choice="Pull Day">Choose</button>
+          </article>
+          <article class="card item-card" data-name="leg day">
+            <div class="card-icon">💪</div>
+            <h3>Leg Day</h3>
+            <p>Gym landing page with plans and trainer cards — a beginner-friendly demo card with clean spacing and hover effects.</p>
+            <div class="card-meta">
+              <span>Rating: 4.2</span>
+              <span>From $249</span>
+            </div>
+            <button class="btn ghost choose-btn" data-choice="Leg Day">Choose</button>
+          </article>
+          <article class="card item-card" data-name="cardio blast">
+            <div class="card-icon">💪</div>
+            <h3>Cardio Blast</h3>
+            <p>Gym landing page with plans and trainer cards — a beginner-friendly demo card with clean spacing and hover effects.</p>
+            <div class="card-meta">
+              <span>Rating: 4.3</span>
+              <span>From $324</span>
+            </div>
+            <button class="btn ghost choose-btn" data-choice="Cardio Blast">Choose</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="plans">
+        <div class="section-heading">
+          <p class="eyebrow">Pricing</p>
+          <h2>Demo plans for the layout</h2>
+          <p>These plans are placeholders, but they make the website feel alive.</p>
+        </div>
+        <div class="pricing-grid">
+          <article class="price-card"><span>Starter</span><h3>$9</h3><p>Good for testing the interface.</p><button class="btn ghost plan-btn">Select</button></article>
+          <article class="price-card popular"><span>Popular</span><h3>$19</h3><p>Best demo plan with highlighted styling.</p><button class="btn plan-btn">Select</button></article>
+          <article class="price-card"><span>Pro</span><h3>$39</h3><p>For showing a premium card state.</p><button class="btn ghost plan-btn">Select</button></article>
+        </div>
+      </section>
+
+      <section class="section dashboard locked" id="dashboardPanel">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Dashboard</p>
+            <h2>Private-looking area</h2>
+            <p>This is unlocked after fake JavaScript login.</p>
+          </div>
+          <span class="status-pill" id="dashboardStatus">Locked</span>
+        </div>
+        <div class="dashboard-grid">
+          <div class="metric-card"><span>Saved</span><strong id="savedCount">0</strong></div>
+          <div class="metric-card"><span>Messages</span><strong>12</strong></div>
+          <div class="metric-card"><span>Level</span><strong>Beginner</strong></div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Send a fake message</h2>
+          <p>Form validation is handled in script.js with a tiny notification.</p>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <label>Name<input type="text" id="contactName" placeholder="Your name" required /></label>
+          <label>Email<input type="email" id="contactEmail" placeholder="you@example.com" required /></label>
+          <label>Message<textarea id="contactMessage" rows="4" placeholder="Write something..." required></textarea></label>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal" id="loginModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close="modal"></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+      <button class="modal-close" data-close="modal" aria-label="Close modal">×</button>
+      <p class="eyebrow">JavaScript only</p>
+      <h2 id="loginTitle">Demo Login</h2>
+      <form id="loginForm" class="login-form">
+        <label>Username<input type="text" id="username" placeholder="student" required /></label>
+        <label>Password<input type="password" id="password" placeholder="1234" required /></label>
+        <button class="btn" type="submit">Login</button>
+      </form>
+      <p class="hint">Use any username with password <strong>1234</strong>.</p>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Ready</div>
+  <script src="script.js"></script>
+</body>
+</html>
